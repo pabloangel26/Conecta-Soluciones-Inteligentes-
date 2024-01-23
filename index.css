@@ -1,0 +1,32 @@
+.logo{display: flex;
+
+}
+.redes{
+    display: flex;
+    
+  }
+  
+
+.navbar{ 
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    
+}
+
+li a{ text-decoration: none;
+    margin-right: 20px;
+}
+.header{ display: flex;
+background-color: darkorange;
+align-items: center;
+justify-content: space-between;
+}
+
+
+#Imagen{
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-top: 0.5%;
+}
