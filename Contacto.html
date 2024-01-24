@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <link rel="stylesheet" href="/index.css">
    
    <!--esta es la forma de comentar una linea de codigo en HTML-->
@@ -42,63 +42,68 @@
 
 </header>
 <img id="Imagen" src="./assest/images/Control.jpg" alt="image Contacto">
-   
 </body>
+<div class="cont">
+    <div class="formulario">
+        <h2>Contacto</h2>
+        <form action="procesar_formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-<body>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
 
-    <section>
-        <div id="contactos">
-            <h2>Información de Contacto</h2>
-        <p>¡Gracias por visitarnos! Contáctanos para obtener más información sobre nuestros servicios.</p>
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
 
-        <h3>Dirección</h3>
-        <p>Calle 80 #143-23, Bogota, Colombia</p>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-        <h3>Telefono</h3>
-        <p>3213456732</p>
+            <button type="pabloangel26qgmail.com">Enviar</button>
+        </form>
+    </div>
 
-        <h3>Correo Electrónico</h3>
-        <p>conecta.sisas@gmail.com</p>
+    <div class="contacto">
+        <h2>Contacto de la Empresa</h2>
+        <p>Dirección: Calle 80#22-65, Bogota</p>
+        <p>Teléfono: 3217235094</p>
+        <p>Correo Electrónico: conecta.sisas@gmail.com</p>
 
+        <h2>Ubicación en Google Maps</h2>
         <div id="map"></div>
-        </div>
-        
-    </section>
+    </div>
 
     <script>
         function initMap() {
+            // Coordenadas de la ubicación de la empresa
             var empresaLocation = {lat: 40.7128, lng: -74.0060};
+
+            // Crear un nuevo mapa centrado en la ubicación de la empresa
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: empresaLocation,
                 zoom: 15
             });
+
+            // Marcador en la ubicación de la empresa
             var marker = new google.maps.Marker({
                 position: empresaLocation,
                 map: map,
-                title: 'Empresa CSI'
+                title: 'CSI'
             });
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
 
-</body>
+</div>
+
+    
+
 
 
 <footer>
 <h1>Hola soy un footer</h1>
 </footer>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
