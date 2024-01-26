@@ -19,3 +19,19 @@ console.log('valor de litros a galones', LitrosToGalones)
 const LitrosToOnzas = litro * 33.814;
 
 console.log('valor de litros a onzas', LitrosToOnzas)
+
+
+let numero1 = 20;
+let numero2 = 4;
+
+const suma =  numero1 + numero2;
+console.log('total de la suma de dos nuemros de entrada', suma)
+
+const resta =  numero1 - numero2;
+console.log('total de la resta de dos nuemros de entrada', resta)
+
+const multiplicacion =  numero1 * numero2;
+console.log('total de la multiplicacion de dos nuemros de entrada', multiplicacion)
+
+const division =  numero1 / numero2;
+console.log('total de la division de dos nuemros de entrada', division)
