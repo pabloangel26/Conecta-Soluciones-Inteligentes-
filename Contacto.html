@@ -13,7 +13,9 @@
 
     <header class="header"> 
 <div class="logo">  
+           <a href="index.html">
              <img src="./assest/images/logo2.jpeg" alt="Logo CSI" width="50px">
+            </a>
 </div>
 <div>
 
@@ -36,8 +38,12 @@
 
 </div>
     <div class="redes"> 
-        <img id="face" src="./assest/images/facbook v2.png" alt="facebook" width="50px">
-        <img src="./assest/images/twitter.png" alt="twitter" width="50px">
+        <a href="https://www.facebook.com/">
+            <img id="face" src="./assest/images/facbook v2.png" alt="facebook" width="50px">
+        </a>
+        <a href="https://twitter.com/">
+            <img src="./assest/images/twitter.png" alt="twitter" width="50px">
+        </a>
     </div>
 
 </header>
@@ -70,29 +76,14 @@
         <p>Correo Electrónico: conecta.sisas@gmail.com</p>
 
         <h2>Ubicación en Google Maps</h2>
-        <div id="map"></div>
+        <div id="map">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.51141489705!2d-74.107807!3d4.64829755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1706236203402!5m2!1ses!2sco"
+             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 
-    <script>
-        function initMap() {
-            // Coordenadas de la ubicación de la empresa
-            var empresaLocation = {lat: 40.7128, lng: -74.0060};
-
-            // Crear un nuevo mapa centrado en la ubicación de la empresa
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: empresaLocation,
-                zoom: 15
-            });
-
-            // Marcador en la ubicación de la empresa
-            var marker = new google.maps.Marker({
-                position: empresaLocation,
-                map: map,
-                title: 'CSI'
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+    
 
 </div>
 
@@ -100,9 +91,9 @@
 
 
 
-<footer>
-<h1>Hola soy un footer</h1>
-</footer>
+  <footer>
+    <p>&copy; 2024 Empresa de Sistemas de AV. Todos los derechos reservados.</p>
+  </footer>
 </html>
 
 
