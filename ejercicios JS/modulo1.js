@@ -72,34 +72,36 @@ a.Si gana menos de 699.999, Descuento de pensión =2%, y más un Aux. de transpo
 b. Si gana entre 700.000 y 999.999, Descuento de pensión =4%, Subsidio familiar = 12.000,sino le pagan el mismo salario.
 c. Si gana más del millón Descuento de pensión =6%.*/
 
-let descuentopension, auxiliodetransporte, salariototala, subsidiofamiliar, salariototalb, salariototalc;
+let descuentopension1, descuentopension2, descuentopension3, auxiliodetransporte, salariototala, subsidiofamiliar, salariototalb, salariototalc;
 
 let sueldo1 = 699999;
 let sueldo2 = 700000;
 let sueldo3 = 999999;
 let sueldo4 = 1000000;
-let salarioempleado = 500000;
+let salarioempleado = 999999;
 
 if (salarioempleado < sueldo1) {
-   descuentopension = salarioempleado * 0.02
+   descuentopension1 = salarioempleado * 0.02
    auxiliodetransporte = salarioempleado * 0.06
     
     
 }
 else  if ((salarioempleado >= sueldo2) && (salarioempleado <= sueldo3)) { 
-    descuentopension = salarioempleado * 0.04
-    subsidiofamiliar = salarioempleado = 12000
+    descuentopension2 = salarioempleado * 0.04
+    subsidiofamiliar = 12000
 
 }
 else  if (salarioempleado > sueldo4) {
-    descuentopension = salarioempleado * 0.06
+    descuentopension3 = salarioempleado * 0.06
 
 }
-salariototala = salarioempleado - descuentopension + auxiliodetransporte
-salariototalb = salarioempleado - descuentopension + subsidiofamiliar
-salariototalc = salarioempleado - descuentopension 
+salariototala = salarioempleado - descuentopension1 + auxiliodetransporte
+salariototalb = salarioempleado - descuentopension2 + subsidiofamiliar
+salariototalc = salarioempleado - descuentopension3 
 
-console.log('descuento de pension', descuentopension)
+console.log('descuento de pension1', descuentopension1)
+console.log('descuento de pension2', descuentopension2)
+console.log('descuento de pension3', descuentopension3)
 console.log('auxilio de transporte', auxiliodetransporte)
 console.log('sbsidio familiar', subsidiofamiliar)
 console.log('salarioTotal a', salariototala)
