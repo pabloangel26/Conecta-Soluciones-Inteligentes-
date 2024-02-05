@@ -1,3 +1,4 @@
+'use strict'
 //Realizar el algoritmo que convierta litros en centilitros, decilitros, galones y onzas
 
 let litro = 5;
@@ -20,7 +21,7 @@ const LitrosToOnzas = litro * 33.814;
 
 console.log('valor de litros a onzas', LitrosToOnzas)
 
-
+//Realizar el algoritmo que realice las 4 operaciones básicas para dos númerosde entrada.
 let numero1 = 20;
 let numero2 = 4;
 
@@ -35,3 +36,80 @@ console.log('total de la multiplicacion de dos nuemros de entrada', multiplicaci
 
 const division =  numero1 / numero2;
 console.log('total de la division de dos nuemros de entrada', division)
+
+//Realizar el algoritmo que convierta grados centígrados en Fahrenheit y viceversa.
+
+
+
+
+
+
+
+
+
+/*Realizar el algoritmo que calcule el valor a pagar por algunos galones de gasolina sisabemos que cada centilitro 
+cuesta 25 pesos. Imprimir el valor a pagar y la cantidadde gasolina despachada en litros*/
+let galon = 5;
+
+const GalonsToCentilitros = galon * 378.541;
+
+console.log('valor de Galon a centilitros', GalonsToCentilitros)
+
+const valorgasolina = 25;
+const valorgalones = GalonsToCentilitros * valorgasolina  ;
+
+console.log('valor a pagar galones de gasolina', valorgalones )
+
+
+
+
+
+
+
+
+/*Realizar un algoritmo que calcule el salario de un empleado según los siguientes parámetros.
+a.Si gana menos de 699.999, Descuento de pensión =2%, y más un Aux. de transporte= 6%.
+b. Si gana entre 700.000 y 999.999, Descuento de pensión =4%, Subsidio familiar = 12.000,sino le pagan el mismo salario.
+c. Si gana más del millón Descuento de pensión =6%.*/
+
+let descuentopension, auxiliodetransporte, salariototala, subsidiofamiliar, salariototalb, salariototalc;
+
+let sueldo1 = 699999;
+let sueldo2 = 700000;
+let sueldo3 = 999999;
+let sueldo4 = 1000000;
+let salarioempleado = 500000;
+
+if (salarioempleado < sueldo1) {
+   descuentopension = salarioempleado * 0.02
+   auxiliodetransporte = salarioempleado * 0.06
+    
+    
+}
+else  if ((salarioempleado >= sueldo2) && (salarioempleado <= sueldo3)) { 
+    descuentopension = salarioempleado * 0.04
+    subsidiofamiliar = salarioempleado = 12000
+
+}
+else  if (salarioempleado > sueldo4) {
+    descuentopension = salarioempleado * 0.06
+
+}
+salariototala = salarioempleado - descuentopension + auxiliodetransporte
+salariototalb = salarioempleado - descuentopension + subsidiofamiliar
+salariototalc = salarioempleado - descuentopension 
+
+console.log('descuento de pension', descuentopension)
+console.log('auxilio de transporte', auxiliodetransporte)
+console.log('sbsidio familiar', subsidiofamiliar)
+console.log('salarioTotal a', salariototala)
+console.log('salarioTotal b', salariototalb)
+console.log('salarioTotal c', salariototalc)
+
+
+
+
+  
+ 
+
+    
