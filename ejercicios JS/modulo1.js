@@ -39,6 +39,16 @@ console.log('total de la division de dos nuemros de entrada', division)
 
 //Realizar el algoritmo que convierta grados centígrados en Fahrenheit y viceversa.
 
+let gradoscentigrados = 0
+let fahrenheit = 40
+
+let gradoscentigadosAfahrenheit = (gradoscentigrados * 9/5) + 32;
+let fahrenheitAgradoscentigrados = ( fahrenheit - 32) * 5/9;
+
+console.log('gradoscentigrados A fahrebheit', gradoscentigadosAfahrenheit)
+console.log('fahrebheit A gradoscentigrados', fahrenheitAgradoscentigrados)
+
+
 
 
 
