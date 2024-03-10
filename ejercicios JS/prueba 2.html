@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop con Dog API</title>
+    <style>
+        #dog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .dog-card {
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            cursor: grab;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrastra y Suelta Imágenes de Perros</h1>
+
+    <div id="dog-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script>
+        // Función para obtener una imagen de perro desde la API
+        function getDogImage() {
+            return fetch("https://dog.ceo/api/breeds/image/random")
+                .then(response => response.json())
+                .then(data => data.message);
+        }
+
+        // Función para agregar una nueva tarjeta de perro al contenedor
+        function addDogCard(imageUrl) {
+            const dogContainer = document.getElementById("dog-container");
+            const dogCard = document.createElement("div");
+            dogCard.className = "dog-card";
+            dogCard.draggable = true;
+
+            // Agregar evento de arrastrar y soltar a la tarjeta
+            dogCard.addEventListener("dragstart", function (event) {
+                event.dataTransfer.setData("text/plain", imageUrl);
+            });
+
+            const img = document.createElement("img");
+            img.src = imageUrl;
+
+            dogCard.appendChild(img);
+            dogContainer.appendChild(dogCard);
+        }
+
+        // Función para permitir la caída durante el arrastre
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        // Función para manejar la soltura de una imagen en el contenedor
+        function drop(event) {
+            event.preventDefault();
+            const imageUrl = event.dataTransfer.getData("text/plain");
+
+            // Agregar una nueva tarjeta de perro con la imagen soltada
+            addDogCard(imageUrl);
+        }
+
+        // Cargar algunas imágenes de perros al inicio
+        for (let i = 0; i < 3; i++) {
+            getDogImage().then(imageUrl => addDogCard(imageUrl));
+        }
+    </script>
+</body>
+</html>

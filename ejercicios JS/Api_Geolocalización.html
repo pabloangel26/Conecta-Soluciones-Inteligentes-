@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apis.css">
+    <title>Geolocalización</title>
+    
+</head>
+<body>
+    <h1>Geolocalización, Oprime el Botón</h1>
+    
+    <button id="btn" onclick="getUserLocation()">Buscar mi ubicación</button>
+    <div id="map"></div>
+
+    <script src="Api_Geolocalizacion.js">
+
+    </script> 
+    <!-- Incluir la API de Google Maps (sin clave de API) -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" 
+    async defer></script>
+    
+</body>
+</html>
