@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { Routes } from '@angular/router';
+import { Routes} from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
+
 export const routes: Routes = [
   {
     path:"",
-    redirectTo:"/inicio",
+    redirectTo:"inicio",
     pathMatch:"full"
   },
   {

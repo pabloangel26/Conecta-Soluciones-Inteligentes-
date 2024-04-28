@@ -5,12 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TextosService {
-
 private textosUrl = 'assets/textos/textos.json'
 
   constructor(private http:HttpClient) { }
-
-  getTextos() {
+  getTextos(){
     return this.http.get(this.textosUrl)
   }
 }
